@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  user-select: none;
+}
+
+.container {
+  background: linear-gradient(135deg, #3c68eb, #8b9eff);
+  padding: 20px;
+  width: 100%;
+  max-height: 100%; /* изменено */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  position: relative;
+  background-color: #cecff9;
+  padding: 0 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* добавлено */
+}
+
+.card-body {
+  min-height: 20px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* добавлено */
+}
+
+h3 {
+  padding-left: 10px;
+  color: #3a3535;
+}
+
+.small-menu {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 20px;
+  height: 4px;
+  gap: 4px;
+}
+
+.small-menu:hover {
+  height: 5px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.small-menu-point {
+  background-color: #2f2929;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.small-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  padding: 20px;
+  color: rgb(64, 65, 87);
+}
+
+.addition-card {
+  width: 100%;
+  margin: 20px 0;
+  text-align: start;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(130, 131, 174);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.cross {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  text-align: center;
+  background-color: #fff;
+  color: rgb(130, 131, 174);
+}
+
+.cross:hover {
+  background-color: rgb(230, 230, 238);
+  cursor: pointer;
+}
+
+.text-space {
+  width: 100%;
+  min-height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: rgb(130, 131, 174);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-area-footer {
+  display: flex;
+  margin: 10px 0;
+  position: relative;
+}
+
+.footer-menu {
+  top: 10px;
+}
+
+.add-card-btn {
+  width: 120px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: #11c320;
+}
+
+.add-card-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.add-card-btn:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
+}
+
+.textarea-close-btn {
+  position: absolute;
+  border: none;
+  font-size: 20px;
+  top: 0;
+  left: 130px;
+  background-color: transparent;
+  color: rgb(130, 131, 174);
+}
+
+.textarea-close-btn:hover {
+  background-color: rgb(181, 182, 229);
+}
+
+.hidden {
+  display: none;
+}
+
+.dragged {
+  position: absolute;
+  width: 30%;
+  z-index: 1000;
+}
